@@ -1,0 +1,25 @@
+{
+    "name": "drmonkeyninja/cakephp-tmdb",
+    "description": "CakePHP TMDB API integration",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "tmdb"],
+    "homepage": "https://github.com/drmonkeyninja/cakephp-tmdb",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Carter",
+            "role": "Author",
+            "homepage": "http://andy-carter.com"
+        }
+    ],
+    "require": {
+        "cakephp/cakephp": "~3.0",
+        "php-tmdb/api": "~2.0",
+        "muffin/webservice": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tmdb\\Lib\\Tmdb\\Driver": "src/Lib/Tmdb"
+        }
+    }
+}
