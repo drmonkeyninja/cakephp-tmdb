@@ -1,5 +1,7 @@
 # CakePHP TMDB
 
+[![License](https://poser.pugx.org/drmonkeyninja/cakephp-tmdb/license.png)](https://packagist.org/packages/drmonkeyninja/cakephp-social-share)
+
 This CakePHP 3 plugin provides integration with the TMDB API for retrieving data on movies and television from [themoviedb.org](https://www.themoviedb.org/). It makes use of the [official TMDB API wrapper](https://github.com/php-tmdb/api) and the [Webservice](https://github.com/UseMuffin/Webservice) plugin for CakePHP.
 
 ## Requirements
