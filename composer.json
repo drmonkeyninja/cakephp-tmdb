@@ -19,7 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Tmdb\\": "src"
+            "Tmdb\\": "src",
+            "Tmdb\\Lib\\Tmdb\\Driver\\": "src/Lib/Tmdb"
         }
     }
 }
