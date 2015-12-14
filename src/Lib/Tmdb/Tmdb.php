@@ -72,4 +72,9 @@ class Tmdb extends AbstractDriver
         }
         $this->_logger = $instance;
     }
+
+    public function getClient()
+    {
+        return $this->_client;
+    }
 }
