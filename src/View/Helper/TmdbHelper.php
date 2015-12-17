@@ -18,14 +18,21 @@ class TmdbHelper extends Helper
      */
     public function image($path, $size, $params = [])
     {
+        $url = $this->imageHelper()->getUrl($path, $size);
+        return $this->Html->image($url, $params);
+    }
+
+    /**
+     * Returns the TMDB image helper from the API wrapper.
+     *
+     * @return object Image helper
+     */
+    public function imageHelper()
+    {
         $tmdb = \Cake\Datasource\ConnectionManager::get('Tmdb');
         $configRepository = new \Tmdb\Repository\ConfigurationRepository($tmdb->getClient());
         $config = $configRepository->load();
-        $imageHelper = new \Tmdb\Helper\ImageHelper($config);
-
-        $url = $imageHelper->getUrl($path, $size);
-
-        return $this->Html->image($url, $params);
+        return new \Tmdb\Helper\ImageHelper($config);
     }
 
 }
