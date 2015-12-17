@@ -46,3 +46,23 @@ For example, to search the database for movies with the title 'Toy Story':
 $tmdb = \Cake\Datasource\ConnectionManager::get('Tmdb');
 $data = $tmdb->getSearchApi()->searchMovies('Toy Story');
 ```
+
+### TmdbHelper
+
+A handy little helper comes with the plugin for rendering TMDB images using the paths returned by the API. To use include the `Tmdb` helper in your controller as normal:-
+
+```php
+public $helpers = ['Tmdb.Tmdb'];
+```
+
+Then in your view:-
+
+```php
+<?= $this->Tmdb->image($movie->poster, 'w154'); ?>
+```
+
+The first parameter needs to be the image path (provided by TMDB); the second parameter is the TMDB size. You can also pass an optional array of image attributes as the third parameter:-
+
+```php
+<?= $this->Tmdb->image($movie->poster, 'w154', ['alt' => $movie->title]); ?>
+```
