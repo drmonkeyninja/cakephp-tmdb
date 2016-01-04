@@ -24,7 +24,6 @@ class Tmdb extends AbstractDriver
     {
         $apiKey = $this->config('api_key');
         $this->_client = new \Tmdb\Client(new \Tmdb\ApiToken($apiKey));
-        return;
     }
 
     /**
@@ -73,6 +72,11 @@ class Tmdb extends AbstractDriver
         $this->_logger = $instance;
     }
 
+    /**
+     * Returns the TMDB client.
+     *
+     * @return \Tmdb\Client
+     */
     public function getClient()
     {
         return $this->_client;

@@ -34,5 +34,4 @@ class TmdbHelper extends Helper
         $config = $configRepository->load();
         return new \Tmdb\Helper\ImageHelper($config);
     }
-
 }
