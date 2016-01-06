@@ -64,7 +64,7 @@ $cache = [
 
 Cake\Cache\Cache::config($cache);
 
-Cake\Core\Plugin::load('Tmdb', ['path' => ROOT . DS]);
+Cake\Core\Plugin::load('CakeTmdb', ['path' => ROOT . DS]);
 
 // Ensure default test connection is defined
 if (!getenv('db_class')) {
