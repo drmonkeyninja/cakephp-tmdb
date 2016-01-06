@@ -16,7 +16,7 @@ Install using composer: `composer require drmonkeyninja/cakephp-tmdb:3.0.*`
 Then add the following lines to bootstrap.php to load the plugin:
 ```php
 Plugin::load('Muffin/Webservice');
-Plugin::load('Tmdb');
+Plugin::load('CakeTmdb');
 ```
 
 ## Configuration
@@ -26,7 +26,7 @@ You will need to configure a new webservice in config/app.php using your TMDB AP
 'Webservices' => [
     'Tmdb' => [
         'className' => 'Muffin\Webservice\Connection',
-        'service' => 'Tmdb\Lib\Tmdb\Driver\Tmdb',
+        'service' => 'CakeTmdb\Lib\Tmdb\Driver\Tmdb',
         'api_key' => 'your_tmdb_api_key'
     ]
 ]
@@ -52,7 +52,7 @@ $data = $tmdb->getSearchApi()->searchMovies('Toy Story');
 A handy little helper comes with the plugin for rendering TMDB images using the paths returned by the API. To use include the `Tmdb` helper in your controller as normal:-
 
 ```php
-public $helpers = ['Tmdb.Tmdb'];
+public $helpers = ['CakeTmdb.Tmdb'];
 ```
 
 Then in your view:-
