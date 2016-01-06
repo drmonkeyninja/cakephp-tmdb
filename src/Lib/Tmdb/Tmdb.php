@@ -1,6 +1,6 @@
 <?php
 
-namespace Tmdb\Lib\Tmdb\Driver;
+namespace CakeTmdb\Lib\Tmdb\Driver;
 
 use Cake\Core\Configure;
 use Cake\Network\Http\Client;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tmdb\View\Helper;
+namespace CakeTmdb\View\Helper;
 
 use Cake\View\Helper;
 

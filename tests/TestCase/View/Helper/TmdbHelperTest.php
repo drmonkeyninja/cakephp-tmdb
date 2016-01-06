@@ -1,17 +1,17 @@
 <?php
 
-namespace Tmdb\TestCase\View\Helper;
+namespace CakeTmdb\TestCase\View\Helper;
 
 use Cake\TestSuite\TestCase;
 use Cake\Network\Request;
 use Cake\View\View;
-use Tmdb\View\Helper\TmdbHelper;
+use CakeTmdb\View\Helper\TmdbHelper;
 
 class TmdbHelperTest extends TestCase
 {
     public function testImage()
     {
-        $tmdb = $this->getMockBuilder('Tmdb\View\Helper\TmdbHelper')
+        $tmdb = $this->getMockBuilder('CakeTmdb\View\Helper\TmdbHelper')
             ->setMethods(['imageHelper'])
             ->setConstructorArgs([new View()])
             ->getMock();
