@@ -19,8 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Tmdb\\": "src",
-            "Tmdb\\Lib\\Tmdb\\Driver\\": "src/Lib/Tmdb"
+            "CakeTmdb\\": "src",
+            "CakeTmdb\\Lib\\Tmdb\\Driver\\": "src/Lib/Tmdb"
         }
     }
 }
