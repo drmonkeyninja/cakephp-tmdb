@@ -33,7 +33,7 @@ class TmdbHelper extends Helper
         $tmdb = \Cake\Datasource\ConnectionManager::get('Tmdb');
         $configRepository = new \Tmdb\Repository\ConfigurationRepository($tmdb->getClient());
         $config = $configRepository->load();
-        
+
         return new \Tmdb\Helper\ImageHelper($config);
     }
 }
