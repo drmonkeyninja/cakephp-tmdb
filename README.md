@@ -34,7 +34,7 @@ You will need to configure a new webservice in config/app.php using your TMDB AP
 
 Then in bootstrap.php instruct the `ConnectionManager` to consume the webservice:
 ```php
-ConnectionManager::config(Configure::consume('Webservices'));
+ConnectionManager::setConfig(Configure::consume('Webservices'));
 ```
 
 ## Usage
