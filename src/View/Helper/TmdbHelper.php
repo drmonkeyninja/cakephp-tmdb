@@ -19,6 +19,7 @@ class TmdbHelper extends Helper
     public function image($path, $size, $params = [])
     {
         $url = $this->imageHelper()->getUrl($path, $size);
+
         return $this->Html->image($url, $params);
     }
 
@@ -32,6 +33,7 @@ class TmdbHelper extends Helper
         $tmdb = \Cake\Datasource\ConnectionManager::get('Tmdb');
         $configRepository = new \Tmdb\Repository\ConfigurationRepository($tmdb->getClient());
         $config = $configRepository->load();
+
         return new \Tmdb\Helper\ImageHelper($config);
     }
 }

@@ -36,6 +36,7 @@ class Tmdb extends AbstractDriver
         if (empty($this->_config['name'])) {
             return '';
         }
+
         return $this->_config['name'];
     }
 
@@ -67,6 +68,7 @@ class Tmdb extends AbstractDriver
             if ($this->_logger === null) {
                 $this->_logger = new QueryLogger;
             }
+
             return $this->_logger;
         }
         $this->_logger = $instance;
